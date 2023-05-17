@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
-  const {user,logOut} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <section>
       <div className="navbar bg-base-100 container mx-auto">
@@ -36,14 +45,16 @@ const Navbar = () => {
                 <Link to="/login">LogIn</Link>
               </li>
               <li>
-                <Link to="/login">LogOut</Link>
+                <Link to="">LogOut</Link>
               </li>
             </ul>
           </div>
           <Link to="/">
             <div>
               <img src="" alt="" />
-              <h1 className=" text-3xl font-bold text-[#ff5733]">Heroic Toy Hub</h1>
+              <h1 className=" text-3xl font-bold text-[#ff5733]">
+                Heroic Toy Hub
+              </h1>
             </div>
           </Link>
         </div>
@@ -53,8 +64,39 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/login">LogIn</Link>
+              <Link to="/all-toys">All Toys</Link>
             </li>
+            <li>
+              <Link to="/my-toys">My Toys</Link>
+            </li>
+            <div className=" flex items-center flex-row-reverse gap-4">
+              <div onClick={handleLogOut}>{user && <Link>logOut</Link>}</div>
+              <div>
+                {user ? (
+                  <>
+                    <img
+                      id="app-title"
+                      className=" rounded-full w-12 h-12 border-2 p-1"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                    {/* <ReactTooltip
+                  anchorId="app-title"
+                  place="bottom"
+                  content={user?.displayName}
+                /> */}
+                  </>
+                ) : (
+                  <Link to="/login">
+                    <button
+                      className="px-6 py-2 hover:bg-[#FF5733] border border-[#FF5733] hover:text-white duration-300 rounded font-semibold"
+                    >
+                      LogIn
+                    </button>
+                  </Link>
+                )}
+              </div>
+            </div>
           </ul>
         </div>
         <div className="navbar-end">
