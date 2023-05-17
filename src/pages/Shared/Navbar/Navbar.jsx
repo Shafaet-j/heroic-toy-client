@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const {user,logOut} = useContext(AuthContext)
   return (
     <section>
       <div className="navbar bg-base-100 container mx-auto">
@@ -32,6 +34,9 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/login">LogIn</Link>
+              </li>
+              <li>
+                <Link to="/login">LogOut</Link>
               </li>
             </ul>
           </div>
