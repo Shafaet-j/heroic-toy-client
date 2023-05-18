@@ -3,10 +3,13 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ToysRow from "./ToysRow";
 import Swal from "sweetalert2";
+import UpdatedModal from "./UpdatedModal";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [myToys, setMyToys] = useState([]);
+  const [show, setShow] = useState(false);
+  const [editedToy, setEditedToy] = useState({});
   const [control, setControl] = useState(false);
   const url = `http://localhost:5000/myToys?email=${user?.email}`;
 
@@ -15,6 +18,13 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [control]);
+
+  const handleShow = (_id, price, description, available_quantity) => {
+    setEditedToy({ _id, price, description, available_quantity });
+    setShow(true);
+  };
+
+  const handleClose = () => setShow(false);
 
   const handleDelete = (id) => {
     console.log("delete", id);
@@ -68,11 +78,15 @@ const MyToys = () => {
                 handleDelete={handleDelete}
                 key={toy._id}
                 toy={toy}
+                handleShow={handleShow}
               ></ToysRow>
             ))}
           </tbody>
         </table>
       </div>
+      {show && (
+        <UpdatedModal/>
+      )}
     </section>
   );
 };

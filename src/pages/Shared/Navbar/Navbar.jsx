@@ -74,6 +74,9 @@ const Navbar = () => {
             <li>
               <Link to="/all-toys">All Toys</Link>
             </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
             <div className=" flex items-center flex-row-reverse gap-4">
               <div onClick={handleLogOut}>{user && <Link>logOut</Link>}</div>
               <div>

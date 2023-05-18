@@ -13,12 +13,12 @@ import pic10 from "../../../assets/ga10.jpg";
 const Gallery = () => {
   return (
     <section>
-      <div className=" flex container mx-auto gap-5">
-        <div className=" w-1/2">
-          <img src={pic1} alt="" />
-        </div>
-        <div className=" grid grid-cols-2 w-1/2 gap-5">
-          <div>
+      <div className="container mx-auto gap-5">
+        <div className=" grid grid-cols-3 gap-5">
+          <div className=" row-start-1 row-end-3">
+            <img src={pic1} alt="" />
+          </div>
+          <div className="col-start-2">
             <img src={pic2} alt="" />
           </div>
           <div>
