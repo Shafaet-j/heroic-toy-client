@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import error from "../../assets/error.png";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div>ErrorPage</div>
-  )
-}
+    <div className=" container mx-auto">
+      <img className=" lg:w-1/2 mx-auto" src={error} alt="" />
+      <Link to="/">
+        <button className="mt-7 bg-[#FF5733] text-white px-4 py-2 rounded-md">
+          Back to Home
+        </button>
+      </Link>
+    </div>
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;
