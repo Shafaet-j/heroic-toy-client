@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
@@ -19,6 +20,9 @@ const AddToys = () => {
     })
       .then((res) => res.json())
       .then((result) => {
+        if (result.insertedId) {
+          Swal.fire("Good job!", "You Have added the toy!", "success");
+        }
         console.log(result);
       })
       .catch((error) => console.log(error));
