@@ -63,9 +63,14 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/all-toys">All Toys</Link>
-            </li>
+            { user && <div className=" flex justify-center">
+              <li>
+                <Link to="/all-toys">All Toys</Link>
+              </li>
+              <li>
+                <Link to="/addToys">Add Toys</Link>
+              </li>
+            </div>}
             <li>
               <Link to="/my-toys">My Toys</Link>
             </li>
@@ -88,9 +93,7 @@ const Navbar = () => {
                   </>
                 ) : (
                   <Link to="/login">
-                    <button
-                      className="px-6 py-2 hover:bg-[#FF5733] border border-[#FF5733] hover:text-white duration-300 rounded font-semibold"
-                    >
+                    <button className="px-6 py-2 hover:bg-[#FF5733] border border-[#FF5733] hover:text-white duration-300 rounded font-semibold">
                       LogIn
                     </button>
                   </Link>
