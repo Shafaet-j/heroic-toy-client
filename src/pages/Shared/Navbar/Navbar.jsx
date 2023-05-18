@@ -65,14 +65,14 @@ const Navbar = () => {
             </li>
             { user && <div className=" flex justify-center gap-4">
               <li>
-                <Link to="/all-toys">All Toys</Link>
+                <Link to="/my-toys">My Toys</Link>
               </li>
               <li>
                 <Link to="/addToys">Add Toys</Link>
               </li>
             </div>}
             <li>
-              <Link to="/my-toys">My Toys</Link>
+              <Link to="/all-toys">All Toys</Link>
             </li>
             <div className=" flex items-center flex-row-reverse gap-4">
               <div onClick={handleLogOut}>{user && <Link>logOut</Link>}</div>

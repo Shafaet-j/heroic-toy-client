@@ -15,7 +15,7 @@ const MyToys = () => {
   }, []);
 
   return (
-    <section>
+    <section className="container mx-auto">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -27,15 +27,16 @@ const MyToys = () => {
                 </label>
               </th>
               <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Reviews</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-           {
-            myToys.map(toy => <ToysRow key={toy._id} toy={toy} ></ToysRow>)
-           }
+            {myToys.map((toy) => (
+              <ToysRow key={toy._id} toy={toy}></ToysRow>
+            ))}
           </tbody>
         </table>
       </div>
