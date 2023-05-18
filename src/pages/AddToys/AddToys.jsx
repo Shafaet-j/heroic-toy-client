@@ -4,7 +4,6 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const AddToys = () => {
-  // const imgKey = process.env.imgBbKey
   const { user } = useContext(AuthContext);
   const {
     register,
