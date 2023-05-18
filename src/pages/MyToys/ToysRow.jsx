@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
-const ToysRow = ({ toy }) => {
+const ToysRow = ({ toy, handleDelete }) => {
   const {
+    _id,
     picture_url,
     name,
     seller_name,
@@ -10,6 +12,7 @@ const ToysRow = ({ toy }) => {
     description,
     rating,
   } = toy;
+
   return (
     <tr>
       <th></th>
@@ -33,8 +36,14 @@ const ToysRow = ({ toy }) => {
       <td>{description.slice(0, 90)}...</td>
       <td>${price}</td>
       <td>{rating}</td>
-      <th>
-        <button className="btn btn-ghost btn-xs">details</button>
+      <th className=" space-x-8">
+        <button className="btn btn-ghost btn-xs">Update</button>
+        <button
+          onClick={() => handleDelete(_id)}
+          className="btn btn-ghost btn-xs"
+        >
+          Delete
+        </button>
       </th>
     </tr>
   );
