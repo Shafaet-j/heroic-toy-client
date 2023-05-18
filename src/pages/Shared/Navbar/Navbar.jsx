@@ -63,7 +63,7 @@ const Navbar = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            { user && <div className=" flex justify-center">
+            { user && <div className=" flex justify-center gap-4">
               <li>
                 <Link to="/all-toys">All Toys</Link>
               </li>
