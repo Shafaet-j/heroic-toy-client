@@ -14,21 +14,21 @@ const Gallery = () => {
   return (
     <section>
       <div className="container mx-auto gap-5">
-        <div className=" grid grid-cols-3 gap-5">
-          <div className=" row-start-1 row-end-3">
-            <img src={pic1} alt="" />
+        <div className=" grid grid-cols-4 grid-rows-2 max-h-[500px] space-x-3">
+          <div className=" row-span-3 col-span-2">
+            <img className=" object-cover h-[100%]" src={pic1} alt="" />
           </div>
-          <div className="col-start-2">
-            <img src={pic2} alt="" />
-          </div>
-          <div>
-            <img src={pic3} alt="" />
+          <div className=" col-start-3">
+            <img className="h-[100%] object-cover" src={pic2} alt="" />
           </div>
           <div className="">
-            <img src={pic4} alt="" />
+            <img className=" h-full object-cover w-full" src={pic3} alt="" />
+          </div>
+          <div className="">
+            <img className=" h-[100%] object-cover" src={pic4} alt="" />
           </div>
           <div>
-            <img src={pic5} alt="" />
+            <img className=" h-full object-cover" src={pic5} alt="" />
           </div>
         </div>
       </div>
