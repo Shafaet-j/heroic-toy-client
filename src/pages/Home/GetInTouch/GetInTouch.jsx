@@ -5,10 +5,10 @@ const GetInTouch = () => {
   return (
     <section className=" my-10">
         <h2 className=" text-5xl font-extrabold text-center">Get in Touch</h2>
-      <div className="hero my-9">
+      <div className="hero my-9 container mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse gap-9">
           <div className="text-center lg:text-left" data-aos="fade-left">
-            <img className=" h-[600px]" src={picture} alt="" />
+            <img className=" max-h-[600px]" src={picture} alt="" />
           </div>
           <div
             className="card flex-shrink-0 w-full max-w-sm border-2"

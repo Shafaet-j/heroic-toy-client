@@ -13,22 +13,79 @@ import pic10 from "../../../assets/ga10.jpg";
 const Gallery = () => {
   return (
     <section className=" my-10">
-      <div data-aos="fade-right"  className="container mx-auto gap-5">
-        <div className=" grid grid-cols-4 grid-rows-2 max-h-[500px] space-x-3">
-          <div className=" row-span-3 col-span-2">
-            <img className=" object-cover h-[100%] w-full" src={pic1} alt="" />
+      <div className="container mx-auto space-y-3">
+        <div className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3" data-aos="fade-right">
+          <div className=" col-start-1 col-end-3 row-start-1 row-end-3" data-aos="zoom-in">
+            <img
+              className="object-cover h-full w-full rounded-md"
+              src={pic1}
+              alt=""
+            />
           </div>
-          <div className=" col-start-3">
-            <img className="h-[100%] object-cover w-full" src={pic2} alt="" />
-          </div>
-          <div className="">
-            <img className=" h-full object-cover w-full" src={pic3} alt="" />
-          </div>
-          <div className="">
-            <img className=" h-[100%] object-cover w-full" src={pic4} alt="" />
+          <div className="col-start-3">
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic2}
+              alt=""
+            />
           </div>
           <div>
-            <img className=" h-full object-cover w-full" src={pic5} alt="" />
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic3}
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic4}
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic5}
+              alt=""
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3" data-aos="fade-left">
+          <div>
+            <img
+              className="object-cover h-full w-full rounded-md"
+              src={pic10}
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic9}
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic8}
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic7}
+              alt=""
+            />
+          </div>
+          <div className="col-start-3 row-start-1 row-end-3 col-end-5" data-aos="zoom-in">
+            <img
+              className="h-full object-cover w-full rounded-md"
+              src={pic6}
+              alt=""
+            />
           </div>
         </div>
       </div>

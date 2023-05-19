@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <section>
+    <section className="sticky top-0 bg-base-100 z-10">
       <div className="navbar bg-base-100 container mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -61,24 +61,28 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-5">
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/">Home</NavLink>
             </li>
-            { user && <div className=" flex justify-center gap-4">
-              <li>
-                <Link to="/my-toys">My Toys</Link>
-              </li>
-              <li>
-                <Link to="/addToys">Add Toys</Link>
-              </li>
-            </div>}
+            {user && (
+              <div className=" flex justify-center gap-4">
+                <li>
+                  <NavLink to="/my-toys">My Toys</NavLink>
+                </li>
+                <li>
+                  <NavLink to="/addToys">Add Toys</NavLink>
+                </li>
+              </div>
+            )}
             <li>
-              <Link to="/all-toys">All Toys</Link>
+              <NavLink to="/all-toys">All Toys</NavLink>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
             <div className=" flex items-center flex-row-reverse gap-4">
-              <div onClick={handleLogOut}>{user && <Link>logOut</Link>}</div>
+              <div onClick={handleLogOut}>
+                {user && <NavLink>logOut</NavLink>}
+              </div>
               <div>
                 {user ? (
                   <>
@@ -95,18 +99,16 @@ const Navbar = () => {
                 /> */}
                   </>
                 ) : (
-                  <Link to="/login">
-                    <button className="px-6 py-2 hover:bg-[#FF5733] border border-[#FF5733] hover:text-white duration-300 rounded font-semibold">
-                      LogIn
-                    </button>
-                  </Link>
+                  <li>
+                    <NavLink to="/login">LogIn</NavLink>
+                  </li>
                 )}
               </div>
             </div>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <a className="btn bg-[#FF5733] border-0">Contact us</a>
         </div>
       </div>
     </section>

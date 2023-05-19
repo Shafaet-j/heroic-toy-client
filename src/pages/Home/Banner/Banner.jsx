@@ -1,20 +1,15 @@
 import React from "react";
-import bg1 from "../../../assets/bg1.jpg";
 import bg2 from "../../../assets/bg2.jpg";
-import bg3 from "../../../assets/bg3.jpg";
-import bg4 from "../../../assets/bg4.jpg";
 
 const Banner = () => {
   return (
     <section className=" w-full">
       <div
-      
-        className="hero min-h-[90vh] bg-gradient-to-bl"
+        className="hero min-h-[90vh]"
         style={{
-          backgroundImage: `url(${bg2})`,
+          backgroundImage: `linear-gradient(to right top, rgba(255, 87, 51, 0.7), rgba(64, 224, 208, 0.4)),url(${bg2})`,
         }}
       >
-        
         <div className="hero-content text-center text-neutral-content ">
           <div className="text-white">
             <h1 className="mb-5 text-4xl lg:text-7xl font-bold ">

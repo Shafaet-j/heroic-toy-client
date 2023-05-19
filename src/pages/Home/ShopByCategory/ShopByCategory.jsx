@@ -15,36 +15,36 @@ const ShopByCategory = () => {
   }, [category]);
   console.log(category);
   return (
-    <div className=" container mx-auto">
+    <section className=" container mx-auto px-5 lg:px-0">
       <Tabs defaultIndex={1} onSelect={(index) => console.log(index)}>
         <TabList>
-          <Tab  onClick={() => setCategory("transformer")}>Transformers</Tab>
+          <Tab onClick={() => setCategory("transformer")}>Transformers</Tab>
           <Tab onClick={() => setCategory("starwar")}>Star Wars</Tab>
           <Tab onClick={() => setCategory("marvel")}>Marvel</Tab>
         </TabList>
         <TabPanel>
-          <div className=" flex items-center gap-5">
+          <div className=" lg:flex items-center gap-5 ">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" flex items-center gap-5">
+          <div className=" lg:flex items-center gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" flex items-center gap-5">
+          <div className=" lg:flex items-center gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
       </Tabs>
-    </div>
+    </section>
   );
 };
 
