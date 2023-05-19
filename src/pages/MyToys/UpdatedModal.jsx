@@ -16,7 +16,7 @@ const UpdatedModal = ({ editedToy, handleClose, setMyToys, myToys }) => {
     exist.available_quantity = updateToy.available_quantity;
     exist.price = updateToy.price;
     exist.description = updateToy.description;
-    fetch(`http://localhost:5000/toys/${_id}`, {
+    fetch(`https://heroic-toy-hub-server-shafaet-j.vercel.app/toys/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateToy),

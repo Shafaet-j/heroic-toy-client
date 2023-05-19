@@ -12,7 +12,7 @@ const MyToys = () => {
   const [show, setShow] = useState(false);
   const [editedToy, setEditedToy] = useState({});
   const [control, setControl] = useState(false);
-  const url = `http://localhost:5000/myToys?email=${user?.email}`;
+  const url = `https://heroic-toy-hub-server-shafaet-j.vercel.app/myToys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -29,7 +29,7 @@ const MyToys = () => {
 
   const handleDelete = (id) => {
     console.log("delete", id);
-    fetch(`http://localhost:5000/toys/${id}`, {
+    fetch(`https://heroic-toy-hub-server-shafaet-j.vercel.app/toys/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -56,7 +56,7 @@ const MyToys = () => {
 
   return (
     <section className="container mx-auto">
-       <Helmet>
+      <Helmet>
         <title>My Toy</title>
       </Helmet>
       <div className="overflow-x-auto w-full">
@@ -88,9 +88,7 @@ const MyToys = () => {
           </tbody>
         </table>
       </div>
-      {show && (
-        <UpdatedModal/>
-      )}
+      {show && <UpdatedModal />}
     </section>
   );
 };

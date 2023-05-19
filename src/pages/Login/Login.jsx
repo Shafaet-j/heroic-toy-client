@@ -46,9 +46,9 @@ const Login = () => {
   };
   return (
     <section>
-       <Helmet>
+       {/* <Helmet>
         <title>Login</title>
-      </Helmet>
+      </Helmet> */}
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse gap-9">
           <div className="text-center lg:text-left">

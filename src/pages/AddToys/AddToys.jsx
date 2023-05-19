@@ -14,7 +14,7 @@ const AddToys = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/addToys", {
+    fetch("https://heroic-toy-hub-server-shafaet-j.vercel.app/addToys", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -74,7 +74,11 @@ const AddToys = () => {
           /> */}
           <div>
             {/* <label htmlFor="subcategory">Subcategory:</label> */}
-            <select className="select select-bordered w-full" id="subcategory" {...register("subcategory")}>
+            <select
+              className="select select-bordered w-full"
+              id="subcategory"
+              {...register("subcategory")}
+            >
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.label}

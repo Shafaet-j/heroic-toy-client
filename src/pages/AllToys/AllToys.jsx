@@ -1,16 +1,15 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
 import ToyCard from "./ToyCard";
-import { Helmet } from "react-helmet";
 
 const AllToys = () => {
   const toys = useLoaderData();
-  console.log(toys);
+
   return (
     <section className="container mx-auto">
-      <Helmet>
+      {/* <Helmet>
         <title>All Toy</title>
-      </Helmet>
+      </Helmet> */}
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -29,8 +28,8 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {toys.map((toy) => (
-              <ToyCard key={toy._id} toy={toy}></ToyCard>
+            {toys?.map((toy) => (
+              <ToyCard key={toy?._id} toy={toy}></ToyCard>
             ))}
           </tbody>
         </table>

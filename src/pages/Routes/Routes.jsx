@@ -32,7 +32,8 @@ const router = createBrowserRouter([
       {
         path: "/all-toys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("http://localhost:5000/allToys"),
+        loader: () =>
+          fetch("https://heroic-toy-hub-server-shafaet-j.vercel.app/allToys"),
       },
       {
         path: "/my-toys",
@@ -54,7 +55,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/toys/${params.id}`),
+          fetch(
+            `https://heroic-toy-hub-server-shafaet-j.vercel.app/toys/${params.id}`
+          ),
       },
       {
         path: "/blog",
