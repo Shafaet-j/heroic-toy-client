@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const AddToys = () => {
   const { user } = useContext(AuthContext);
@@ -37,6 +38,9 @@ const AddToys = () => {
 
   return (
     <section className=" mx-auto container my-6">
+      <Helmet>
+        <title>Add Toy</title>
+      </Helmet>
       <h2 className=" text-5xl font-bold text-center my-8">
         Add Toys in your website
       </h2>

@@ -4,6 +4,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import ToysRow from "./ToysRow";
 import Swal from "sweetalert2";
 import UpdatedModal from "./UpdatedModal";
+import { Helmet } from "react-helmet";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
@@ -55,6 +56,9 @@ const MyToys = () => {
 
   return (
     <section className="container mx-auto">
+       <Helmet>
+        <title>My Toy</title>
+      </Helmet>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
