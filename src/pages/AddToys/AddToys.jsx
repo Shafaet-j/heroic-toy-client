@@ -28,6 +28,13 @@ const AddToys = () => {
       .catch((error) => console.log(error));
   };
 
+  const options = [
+    { label: "Marvel", value: "marvel" },
+    { label: "Transformer", value: "transformer" },
+    { label: "Star War", value: "starwar" },
+    { label: "Avengers", value: "avengers" },
+  ];
+
   return (
     <section className=" mx-auto container my-6">
       <h2 className=" text-5xl font-bold text-center my-8">
@@ -56,11 +63,21 @@ const AddToys = () => {
             defaultValue={user?.email}
             {...register("seller_email")}
           />
-          <input
+          {/* <input
             className="input input-bordered"
             placeholder="sub category"
             {...register("sub_category")}
-          />
+          /> */}
+          <div>
+            {/* <label htmlFor="subcategory">Subcategory:</label> */}
+            <select className="select select-bordered w-full" id="subcategory" {...register("subcategory")}>
+              {options.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
           <input
             className="input input-bordered"
             placeholder="Toy price"

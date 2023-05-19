@@ -12,23 +12,23 @@ import pic10 from "../../../assets/ga10.jpg";
 
 const Gallery = () => {
   return (
-    <section>
-      <div className="container mx-auto gap-5">
+    <section className=" my-10">
+      <div data-aos="fade-right"  className="container mx-auto gap-5">
         <div className=" grid grid-cols-4 grid-rows-2 max-h-[500px] space-x-3">
           <div className=" row-span-3 col-span-2">
-            <img className=" object-cover h-[100%]" src={pic1} alt="" />
+            <img className=" object-cover h-[100%] w-full" src={pic1} alt="" />
           </div>
           <div className=" col-start-3">
-            <img className="h-[100%] object-cover" src={pic2} alt="" />
+            <img className="h-[100%] object-cover w-full" src={pic2} alt="" />
           </div>
           <div className="">
             <img className=" h-full object-cover w-full" src={pic3} alt="" />
           </div>
           <div className="">
-            <img className=" h-[100%] object-cover" src={pic4} alt="" />
+            <img className=" h-[100%] object-cover w-full" src={pic4} alt="" />
           </div>
           <div>
-            <img className=" h-full object-cover" src={pic5} alt="" />
+            <img className=" h-full object-cover w-full" src={pic5} alt="" />
           </div>
         </div>
       </div>
