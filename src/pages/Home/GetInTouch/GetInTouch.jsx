@@ -3,8 +3,9 @@ import picture from "../../../assets/Get.png";
 
 const GetInTouch = () => {
   return (
-    <section>
-      <div className="hero min-h-screen">
+    <section className=" my-10">
+        <h2 className=" text-5xl font-extrabold text-center">Get in Touch</h2>
+      <div className="hero my-9">
         <div className="hero-content flex-col lg:flex-row-reverse gap-9">
           <div className="text-center lg:text-left" data-aos="fade-left">
             <img className=" h-[600px]" src={picture} alt="" />
@@ -13,29 +14,29 @@ const GetInTouch = () => {
             className="card flex-shrink-0 w-full max-w-sm border-2"
             data-aos="fade-right"
           >
-            <div className="card-body">
-              <form>
+            <div className="">
+              <form className=" space-y-6">
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Email</span>
-                  </label>
                   <input
                     type="email"
-                    name="email"
-                    placeholder="email"
+                    name="Name"
+                    placeholder="Your Name"
                     className="input input-bordered"
                   />
                 </div>
                 <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Password</span>
-                  </label>
                   <input
-                    type="text"
-                    name="password"
-                    placeholder="password"
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
                     className="input input-bordered"
                   />
+                </div>
+                <div className="form-control">
+                  <textarea
+                    placeholder="Your Message"
+                    className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+                  ></textarea>
                 </div>
                 <div className="form-control mt-6">
                   <button type="submit" className="btn bg-[#FF5733] border-0">

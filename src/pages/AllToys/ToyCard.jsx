@@ -13,7 +13,7 @@ const ToyCard = ({ toy }) => {
     _id,
   } = toy;
   return (
-    <tr>
+    <tr data-aos="fade-up">
       <th></th>
       <td>
         <div className="flex items-center space-x-3">
