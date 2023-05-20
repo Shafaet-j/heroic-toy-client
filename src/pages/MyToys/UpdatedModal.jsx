@@ -41,27 +41,36 @@ const UpdatedModal = ({ editedToy, handleClose, setMyToys, myToys }) => {
             ✕
           </label>
           <form onSubmit={handleSubmit(handleUpdateToy)} className=" p-5">
-            <input
-              className="input input-bordered w-full mb-5"
-              defaultValue={price}
-              type="text"
-              name="price"
-              {...register("price")}
-            />
-            <input
-              defaultValue={available_quantity}
-              className="input input-bordered w-full mb-5"
-              type="text"
-              name="available_quantity"
-              {...register("available_quantity")}
-            />
-            <input
-              defaultValue={description}
-              className="input input-bordered w-full mb-5"
-              type="text"
-              name="description"
-              {...register("description")}
-            />
+            <div className=" flex gap-4 items-center mb-5 justify-between">
+              <label htmlFor="">Price:</label>
+              <input
+                className="input input-bordered w-full"
+                defaultValue={price}
+                type="text"
+                name="price"
+                {...register("price")}
+              />
+            </div>
+            <div className=" flex gap-4 items-center mb-5 justify-between">
+              <label htmlFor="">Quantity:</label>
+              <input
+                defaultValue={available_quantity}
+                className="input input-bordered w-full"
+                type="text"
+                name="available_quantity"
+                {...register("available_quantity")}
+              />
+            </div>
+            <div className=" flex gap-4 items-center mb-5 justify-between">
+              <label htmlFor="">Description:</label>
+              <input
+                defaultValue={description}
+                className="input input-bordered w-full"
+                type="text"
+                name="description"
+                {...register("description")}
+              />
+            </div>
             <button className=" btn btn-primary" type="submit">
               {" "}
               Update Toy

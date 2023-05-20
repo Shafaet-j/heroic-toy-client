@@ -11,21 +11,10 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   const [error, setError] = useState("");
 
-  const handleGoogle = () => {
-    googleLogIn()
-      .then((result) => {
-        console.log(result);
-        navigate(from);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
 
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
-    console.log(form);
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
@@ -44,6 +33,20 @@ const Login = () => {
         setError(error.message);
       });
   };
+// Google login 
+  const handleGoogle = () => {
+    googleLogIn()
+      .then((result) => {
+        console.log(result);
+        navigate(from);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+
+
   return (
     <section>
        {/* <Helmet>
@@ -63,6 +66,7 @@ const Login = () => {
                   </label>
                   <input
                     type="email"
+                    required
                     name="email"
                     placeholder="email"
                     className="input input-bordered"
@@ -73,7 +77,8 @@ const Login = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                  required
+                    type="password"
                     name="password"
                     placeholder="password"
                     className="input input-bordered"
@@ -89,10 +94,13 @@ const Login = () => {
                     Login
                   </button>
                 </div>
-                <div>
+               
+              </form>
+
+              <div>
                   <h3 className=" divider">Or login with</h3>
                   <button onClick={handleGoogle}>
-                    <FaGoogle />
+                    <FaGoogle size={30} />
                   </button>
                   <p>
                     Need an account??{" "}
@@ -103,7 +111,6 @@ const Login = () => {
                   </p>
                   <p className=" text-error">{error}</p>
                 </div>
-              </form>
             </div>
           </div>
         </div>

@@ -13,9 +13,19 @@ import pic10 from "../../../assets/ga10.jpg";
 const Gallery = () => {
   return (
     <section className=" my-10">
+      <h2 className=" text-xl font-bold text-center mb-5">Our Gallery</h2>
+      <h3 className=" text-5xl font-extrabold text-center mb-10">
+        We design toys not just for kids <br /> but with kids
+      </h3>
       <div className="container mx-auto space-y-3">
-        <div className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3" data-aos="fade-right">
-          <div className=" col-start-1 col-end-3 row-start-1 row-end-3" data-aos="zoom-in">
+        <div
+          className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3"
+          data-aos="fade-right"
+        >
+          <div
+            className=" col-start-1 col-end-3 row-start-1 row-end-3"
+            data-aos="zoom-in"
+          >
             <img
               className="object-cover h-full w-full rounded-md"
               src={pic1}
@@ -51,7 +61,10 @@ const Gallery = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3" data-aos="fade-left">
+        <div
+          className="grid grid-cols-4 grid-rows-2 max-h-[500px] gap-3"
+          data-aos="fade-left"
+        >
           <div>
             <img
               className="object-cover h-full w-full rounded-md"
@@ -80,7 +93,10 @@ const Gallery = () => {
               alt=""
             />
           </div>
-          <div className="col-start-3 row-start-1 row-end-3 col-end-5" data-aos="zoom-in">
+          <div
+            className="col-start-3 row-start-1 row-end-3 col-end-5"
+            data-aos="zoom-in"
+          >
             <img
               className="h-full object-cover w-full rounded-md"
               src={pic6}

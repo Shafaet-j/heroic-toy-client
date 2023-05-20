@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import ToysRow from "./ToysRow";
 import Swal from "sweetalert2";
@@ -28,13 +27,11 @@ const MyToys = () => {
   const handleClose = () => setShow(false);
 
   const handleDelete = (id) => {
-    console.log("delete", id);
     fetch(`https://heroic-toy-hub-server-shafaet-j.vercel.app/toys/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.deletedCount) {
           Swal.fire({
             title: "Are you sure?",
@@ -64,15 +61,12 @@ const MyToys = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
+              <th></th>
               <th>Name</th>
               <th>Description</th>
               <th>Price</th>
               <th>Reviews</th>
+              <th>Quantity</th>
               <th></th>
             </tr>
           </thead>
@@ -88,7 +82,7 @@ const MyToys = () => {
           </tbody>
         </table>
       </div>
-      {show && <UpdatedModal />}
+      {show && <UpdatedModal editedToy={editedToy} myToys={myToys} handleClose={handleClose} />}
     </section>
   );
 };

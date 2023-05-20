@@ -18,7 +18,7 @@ const WhatPeopleSay = () => {
             </div>
             <h3 className=" text-2xl font-semibold">John</h3>
             <p>
-              I have been able to use eBay Cars to research exactly what car I
+              I have been able to use toy hub to research exactly what car I
               want, in what trim and average prices for it. It's a great tool to
               have available to me.
             </p>
@@ -41,7 +41,7 @@ const WhatPeopleSay = () => {
             </div>
             <h3 className=" font-semibold text-2xl">Sam</h3>
             <p>
-              I have been able to use eBay Cars to research exactly what car I
+              I have been able to use toy Cars to research exactly what car I
               want, in what trim and average prices for it. It's a great tool to
               have available to me.
             </p>
@@ -64,7 +64,7 @@ const WhatPeopleSay = () => {
             </div>
             <h3 className=" font-semibold text-2xl">Ramsy Bolton</h3>
             <p>
-              I have been able to use eBay Cars to research exactly what car I
+              I have been able to use toy Cars to research exactly what car I
               want, in what trim and average prices for it. It's a great tool to
               have available to me.
             </p>
@@ -87,7 +87,7 @@ const WhatPeopleSay = () => {
             </div>
             <h3 className=" font-semibold text-2xl">John</h3>
             <p>
-              I have been able to use eBay Cars to research exactly what car I
+              I have been able to use toy Cars to research exactly what car I
               want, in what trim and average prices for it. It's a great tool to
               have available to me.
             </p>

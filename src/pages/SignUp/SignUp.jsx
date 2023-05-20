@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 import picture from "../../assets/logImg.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
+  const navigate = useNavigate()
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -27,6 +28,7 @@ const SignUp = () => {
         setError("");
         form.reset();
         setSuccess("user created successfully");
+        navigate('/')
         updateProfilePicture(name, photo)
           .then((result) => {
             console.log(result);

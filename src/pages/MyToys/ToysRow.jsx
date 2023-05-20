@@ -38,6 +38,7 @@ const ToysRow = ({ toy, handleDelete,handleShow }) => {
         <td>{description.slice(0,90)}...</td>
         <td>${price}</td>
         <td>{rating}</td>
+        <td>{available_quantity}</td>
         <th className=" space-x-8">
           <label onClick={()=> handleShow(_id,price,description,available_quantity)} htmlFor="my-modal" className="">
             Update

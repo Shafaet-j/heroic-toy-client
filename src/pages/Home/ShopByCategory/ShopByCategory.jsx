@@ -5,15 +5,15 @@ import "react-tabs/style/react-tabs.css";
 import CategoryCard from "./CategoryCard";
 
 const ShopByCategory = () => {
-  const [category, setCategory] = useState("transformers");
+  const [category, setCategory] = useState(" ");
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allToys/${category}`)
+    fetch(`https://heroic-toy-hub-server-shafaet-j.vercel.app/allToys/${category}`)
       .then((res) => res.json())
       .then((data) => setJobs(data));
   }, [category]);
-  console.log(category);
+
   return (
     <section className=" container mx-auto px-5 lg:px-0">
       <Tabs defaultIndex={1} onSelect={(index) => console.log(index)}>
@@ -23,21 +23,21 @@ const ShopByCategory = () => {
           <Tab onClick={() => setCategory("marvel")}>Marvel</Tab>
         </TabList>
         <TabPanel>
-          <div className=" lg:flex items-center gap-5 ">
+          <div className=" grid grid-cols-3 gap-5 ">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" lg:flex items-center gap-5">
+          <div className=" grid grid-cols-3 gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" lg:flex items-center gap-5">
+          <div className=" grid grid-cols-3 gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}

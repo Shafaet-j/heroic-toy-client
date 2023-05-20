@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
@@ -92,11 +93,11 @@ const Navbar = () => {
                       src={user.photoURL}
                       alt=""
                     />
-                    {/* <ReactTooltip
-                  anchorId="app-title"
-                  place="bottom"
-                  content={user?.displayName}
-                /> */}
+                    <ReactTooltip
+                      anchorId="app-title"
+                      place="bottom"
+                      content={user?.displayName}
+                    />
                   </>
                 ) : (
                   <li>
