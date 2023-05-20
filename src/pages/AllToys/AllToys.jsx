@@ -7,6 +7,7 @@ const AllToys = () => {
   const toys = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearchChange = (event) => {
+    event.preventDefault()
     setSearchTerm(event.target.value);
   };
   const filteredToys = toys.filter((toy) =>

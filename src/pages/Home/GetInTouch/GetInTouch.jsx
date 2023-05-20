@@ -3,8 +3,8 @@ import picture from "../../../assets/Get.png";
 
 const GetInTouch = () => {
   return (
-    <section className="container mx-auto my-10">
-        <h2 className=" text-5xl font-extrabold text-center">Get in Touch</h2>
+    <section className="container mx-auto my-10 overflow-hidden">
+        <h2 className=" lg:text-5xl font-extrabold text-center">Get in Touch</h2>
       <div className="hero my-9 container mx-auto">
         <div className="hero-content flex-col lg:flex-row-reverse gap-9">
           <div className="text-center lg:text-left" data-aos="fade-left">

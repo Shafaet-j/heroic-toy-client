@@ -5,19 +5,21 @@ import ShopByCategory from "../ShopByCategory/ShopByCategory";
 import WhatPeopleSay from "../WhatPeopleSay/WhatPeopleSay";
 import GetInTouch from "../GetInTouch/GetInTouch";
 import { Helmet } from "react-helmet";
+import BannerNew from "../Banner/BannerNew";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Home</title>
       </Helmet>
+      {/* <BannerNew></BannerNew> */}
       <Banner></Banner>
       <Gallery></Gallery>
       <ShopByCategory></ShopByCategory>
       <WhatPeopleSay></WhatPeopleSay>
       <GetInTouch></GetInTouch>
-    </div>
+    </>
   );
 };
 

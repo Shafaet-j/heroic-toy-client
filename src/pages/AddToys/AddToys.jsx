@@ -30,10 +30,10 @@ const AddToys = () => {
   };
 
   const options = [
-    { label: "Marvel", value: "marvel" },
-    { label: "Transformer", value: "transformer" },
-    { label: "Star War", value: "starwar" },
-    { label: "Avengers", value: "avengers" },
+    { label: "Truck Toy", value: "truck" },
+    { label: "Regular Car", value: "regular" },
+    { label: "Police Car Toy", value: "police" },
+    { label: "Mini Fire truck", value: "fire" },
   ];
 
   return (
