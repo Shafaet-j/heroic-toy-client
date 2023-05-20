@@ -11,6 +11,9 @@ const MyToys = () => {
   const [show, setShow] = useState(false);
   const [editedToy, setEditedToy] = useState({});
   const [control, setControl] = useState(false);
+
+  const [sortOption, setSortOption] = useState("lowest");
+
   const url = `https://heroic-toy-hub-server-shafaet-j.vercel.app/myToys?email=${user?.email}`;
 
   useEffect(() => {
@@ -18,6 +21,21 @@ const MyToys = () => {
       .then((res) => res.json())
       .then((data) => setMyToys(data));
   }, [control]);
+
+  useEffect(() => {
+    const sortedToys = [...myToys];
+    if (sortOption === "lowest") {
+      sortedToys.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    } else if (sortOption === "highest") {
+      sortedToys.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    }
+    setMyToys(sortedToys);
+  }, [sortOption]);
+
+  const handleSortOptionChange = (event) => {
+    console.log(event.target.value)
+    setSortOption(event.target.value);
+  };
 
   const handleShow = (_id, price, description, available_quantity) => {
     setEditedToy({ _id, price, description, available_quantity });
@@ -56,6 +74,16 @@ const MyToys = () => {
       <Helmet>
         <title>My Toy</title>
       </Helmet>
+      <div className=" text-right my-5">
+        <select
+          className="select select-bordered w-full max-w-xs"
+          value={sortOption}
+          onChange={handleSortOptionChange}
+        >
+          <option value="lowest">Price (Lowest)</option>
+          <option value="highest">Price (Highest)</option>
+        </select>
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
@@ -82,7 +110,13 @@ const MyToys = () => {
           </tbody>
         </table>
       </div>
-      {show && <UpdatedModal editedToy={editedToy} myToys={myToys} handleClose={handleClose} />}
+      {show && (
+        <UpdatedModal
+          editedToy={editedToy}
+          myToys={myToys}
+          handleClose={handleClose}
+        />
+      )}
     </section>
   );
 };

@@ -23,21 +23,21 @@ const ShopByCategory = () => {
           <Tab onClick={() => setCategory("marvel")}>Marvel</Tab>
         </TabList>
         <TabPanel>
-          <div className=" grid grid-cols-3 gap-5 ">
+          <div className=" grid lg:grid-cols-3 gap-5 ">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" grid grid-cols-3 gap-5">
+          <div className=" grid lg:grid-cols-3 gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className=" grid grid-cols-3 gap-5">
+          <div className=" grid lg:grid-cols-3 gap-5">
             {jobs.map((job) => (
               <CategoryCard key={job._id} job={job}></CategoryCard>
             ))}

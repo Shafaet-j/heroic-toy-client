@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 const Home = () => {
   return (
     <div>
-       <Helmet>
+      <Helmet>
         <title>Home</title>
       </Helmet>
       <Banner></Banner>

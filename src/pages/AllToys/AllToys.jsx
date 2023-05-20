@@ -6,19 +6,25 @@ const AllToys = () => {
   const toys = useLoaderData();
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto my-16">
       {/* <Helmet>
         <title>All Toy</title>
       </Helmet> */}
+
+      <div className=" my-10">
+        <input
+          type="text"
+          placeholder="Search Your Toys"
+          className="input input-bordered w-full max-w-xs"
+        />
+      </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
           <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+                <label></label>
               </th>
               <th>Name</th>
               <th>Description</th>
@@ -28,7 +34,7 @@ const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {toys?.map((toy) => (
+            {toys.slice(0, 20).map((toy) => (
               <ToyCard key={toy?._id} toy={toy}></ToyCard>
             ))}
           </tbody>

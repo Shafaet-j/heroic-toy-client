@@ -53,8 +53,8 @@ const Navbar = () => {
           <Link to="/">
             <div>
               <img src="" alt="" />
-              <h1 className=" text-3xl font-bold text-[#ff5733]">
-                Heroic Toy Hub
+              <h1 className="text-xl lg:text-3xl font-bold text-[#ff5733]">
+                Turbo Toy
               </h1>
             </div>
           </Link>

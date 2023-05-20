@@ -12,9 +12,9 @@ import pic10 from "../../../assets/ga10.jpg";
 
 const Gallery = () => {
   return (
-    <section className=" my-10">
+    <section className=" container mx-auto my-10">
       <h2 className=" text-xl font-bold text-center mb-5">Our Gallery</h2>
-      <h3 className=" text-5xl font-extrabold text-center mb-10">
+      <h3 className=" lg:text-5xl font-extrabold text-center mb-10">
         We design toys not just for kids <br /> but with kids
       </h3>
       <div className="container mx-auto space-y-3">
