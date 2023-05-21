@@ -16,8 +16,8 @@ const Navbar = () => {
   };
 
   return (
-    <section className="sticky top-0 bg-base-100 z-10">
-      <div className="navbar bg-base-100 container mx-auto">
+    <section className="sticky top-0 bg-base-100 z-50 border-b-2">
+      <div className="navbar bg-base-100 container mx-auto pb-3">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -117,7 +117,9 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-[#FF5733] border-0">Contact us</a>
+          <a className="btn btn-secondary">
+            Contact us
+          </a>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const SignUp = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -28,7 +28,7 @@ const SignUp = () => {
         setError("");
         form.reset();
         setSuccess("user created successfully");
-        navigate('/')
+        navigate("/");
         updateProfilePicture(name, photo)
           .then((result) => {
             console.log(result);
@@ -109,7 +109,7 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn bg-[#FF5733] border-0">SignUp</button>
+                  <button className="btn btn-secondary">SignUp</button>
                 </div>
                 <div>
                   <h3 className=" divider">Or login with</h3>
