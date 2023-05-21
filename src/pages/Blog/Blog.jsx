@@ -5,7 +5,7 @@ const Blog = () => {
   return (
     <section className="container mx-auto my-20">
        <Helmet>
-        <title>Blog</title>
+        <title>Blog - Turbo Toy</title>
       </Helmet>
       <div className=" grid grid-cols-2 gap-6 justify-items-center">
         <div className="card w-full bg-base-100 shadow-xl">

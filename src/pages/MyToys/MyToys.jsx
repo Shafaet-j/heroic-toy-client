@@ -72,7 +72,7 @@ const MyToys = () => {
   return (
     <section className="container mx-auto">
       <Helmet>
-        <title>My Toy</title>
+        <title>My Toys - Turbo Toy</title>
       </Helmet>
       <div className=" text-right my-5">
         <select

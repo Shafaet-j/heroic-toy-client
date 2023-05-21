@@ -39,7 +39,7 @@ const AddToys = () => {
   return (
     <section className=" mx-auto container my-6">
       <Helmet>
-        <title>Add Toy</title>
+        <title>Add Toys - Turbo toy</title>
       </Helmet>
       <h2 className=" text-5xl font-bold text-center my-8">
         Add Toys in your website

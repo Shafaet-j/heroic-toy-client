@@ -17,7 +17,7 @@ const AllToys = () => {
   return (
     <section className="container mx-auto my-16">
       <Helmet>
-        <title>All Toy</title>
+        <title>All Toys - Turbo Toy</title>
       </Helmet>
 
       <div className=" my-10">

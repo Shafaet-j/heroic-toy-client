@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../../assets/logo.png";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
@@ -42,17 +43,24 @@ const Navbar = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
+              {user && (
+                <div className=" lg:flex justify-center gap-4">
+                  <li>
+                    <NavLink to="/my-toys">My Toys</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/addToys">Add Toys</NavLink>
+                  </li>
+                </div>
+              )}
               <li>
-                <Link to="/login">LogIn</Link>
-              </li>
-              <li>
-                <Link to="">LogOut</Link>
+                <NavLink to="/all-toys">All Toys</NavLink>
               </li>
             </ul>
           </div>
           <Link to="/">
-            <div>
-              <img src="" alt="" />
+            <div className=" flex items-center">
+              <img className=" w-16 h-16" src={logo} alt="" />
               <h1 className="text-xl lg:text-3xl font-bold text-[#ff5733]">
                 Turbo Toy
               </h1>
@@ -89,7 +97,7 @@ const Navbar = () => {
                   <>
                     <img
                       id="app-title"
-                      className=" rounded-full w-12 h-12 border-2 p-1"
+                      className=" rounded-full w-12 h-12 border-2 p-1 border-[#40E0D0]"
                       src={user.photoURL}
                       alt=""
                     />
